@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.quiz{
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.431);
+    animation: moveBox 2s alternate;
+}
+
+@keyframes moveBox {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(100px);
+    }
+
+    50% {
+        transform: translateX(200px);
+    }
+
+    75% {
+        transform: translateX(100px);
+    }
+
+    85%{
+        transform: translatex(-200px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+hr{
+    color: black;
+    background-color: black;
+    height: 1px;
+}
+
+.option{
+    
+    display: grid;
+    grid-gap: 10px;
+}
+
+input{
+    padding: 6px;
+    border: none;
+    background-color: rgba(0, 102, 255, 0.605);
+}
+
+input:hover{
+    background-color: rgba(0, 102, 255, 0.852);
+}
+
+#result{
+    font-size: 20px;
+}

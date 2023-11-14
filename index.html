@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="quiz">
+            <h2>What is chat-gpt?</h2>
+            <hr>
+            <div class="option">
+                <input type="button" value="a) bot" onclick="ckans(this)">
+                <input type="button" value="b) human" onclick="ckans(this)">
+                <input type="button" value="c) open ai product"onclick="ckans(this)">
+                <input type="button" value="d) both a) and c)" onclick="ckans(this)">
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function ckans(button){
+            const correctAns = "d) both a) and c)"
+            const  result = document.getElementById('result')
+
+            if (button.value === correctAns){
+                button.style.backgroundColor = '#2ecc71';
+                result.innerHTML = 'correct ans..';
+                result.style.color = '#2ecc71';
+
+            }else{
+                button.style.backgroundColor = '#e74c3c';
+                result.innerHTML = 'Wrong ans..';
+                result.style.color = 'red';
+            }
+            
+            disableButtons();
+
+        }
+
+        function disableButtons() {
+            const buttons = document.querySelectorAll('input[type="button"]')
+            buttons.forEach(function(button){
+                button.disabled = true
+            })
+        }
+    </script>
+</body>
+</html>
